@@ -1,6 +1,15 @@
 // Game variables
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
+
+// Set canvas size
+if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+} else {
+    canvas.width = 1000;
+    canvas.height = 700;
+}
 const startScreen = document.getElementById('startScreen');
 const gameOverScreen = document.getElementById('gameOverScreen');
 const gameUI = document.getElementById('gameUI');
@@ -43,9 +52,18 @@ const bird = {
 
 // Pipes array
 let pipes = [];
-const pipeWidth = 100;
-const pipeGap = 250;
-const pipeSpeed = 1.2;
+let pipeWidth = 100;
+let pipeGap = 250;
+let pipeSpeed = 1.2;
+
+// Mobile detection
+const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+if (isMobile) {
+    pipeSpeed = 2;
+    pipeWidth = 80;
+    pipeGap = 200;
+}
 
 // Background elements
 let backgroundOffset = 0;
