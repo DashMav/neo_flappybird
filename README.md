@@ -1,5 +1,6 @@
 # Flappy Bird Minigame
 
+*BRO I WAS BORED AF AND JUST BUILT THIS FOR FUN, LOT MORE FUN MINI GAMES COMINHE FUTURE*
 A retro-style Flappy Bird game implemented in HTML5 Canvas with JavaScript.
 
 ## Features
